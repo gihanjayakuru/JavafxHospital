@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="417.0" styleClass="root" stylesheets="@../view/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.LoginController">
+   <children>
+      <AnchorPane layoutX="44.0" layoutY="84.0" prefHeight="433.0" prefWidth="324.0" stylesheets="@../view/Style.css">
+         <children>
+            <AnchorPane prefHeight="128.0" prefWidth="329.0" styleClass="loginHead" stylesheets="@../view/Style.css">
+               <children>
+                  <Label layoutX="12.0" layoutY="16.0" prefHeight="97.0" prefWidth="308.0" text="Welcome Hospital Management Sytem">
+                     <font>
+                        <Font name="Impact" size="19.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="63.0" layoutY="217.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" promptText="Username or ID" />
+            <JFXTextField fx:id="txtPassword" labelFloat="true" layoutX="63.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" promptText="Password" />
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="115.0" layoutY="355.0" onAction="#open_app" onMouseClicked="#open_app" prefHeight="35.0" prefWidth="96.0" ripplerFill="#1657bf" styleClass="loginBtn" text="Login" textFill="#fffefe" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="391.0" layoutY="14.0" onMouseClicked="#close_app" text="X">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
