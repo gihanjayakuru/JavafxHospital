@@ -23,6 +23,8 @@ and open the template in the editor.
 .loginHead{
     -fx-background-color: #6747CD;
     -fx-border-color: #6747CD;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
 }
 .loginBtn{
     -fx-background-color: #6747CD;
@@ -36,5 +38,42 @@ and open the template in the editor.
     -fx-border-color: #6747CD;
     -fx-border-width: 1px;
     -fx-border-style: solid;
-    -fx-border-radius: 5px;
+    -fx-border-radius: 3px;
+}
+.loginbg{
+    -fx-background-color: linear-gradient(to top,#c31399,#9118fd);
+}
+
+.toobar{
+    -fx-background-color: #243A51;
+}
+
+.jfx-hamburger-icon{
+    -fx-spacing: 4px;
+}
+
+.jfx-hamburger StackPane{
+    -fx-background-color: #ffffff;
+    -fx-pref-width: 30px;
+    -fx-background-radius: 5px;
+}
+
+.lbl-status{
+    -fx-background-color: #c0139f;
+    -fx-text-fill: #FFF;
+    -fx-alignment: CENTER;
+    -fx-font-size:12px;
+    -fx-background-radius: 5px;      
+}
+
+.lbl-user{
+    
+    -fx-text-fill: #FFF;
+    -fx-alignment: CENTER;
+    -fx-font-size:12px;
+    -fx-background-radius: 5px;      
+}
+
+.tab-pane{
+   
 }
