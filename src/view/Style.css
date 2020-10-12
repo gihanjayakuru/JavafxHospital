@@ -7,6 +7,12 @@ and open the template in the editor.
     Created on : Sep 12, 2020, 3:16:32 PM
     Author     : hasa
 */
+*{
+    -fx-primary: #2A2E37;
+    -fx-secondary: #FFFF8D;
+    -fx-primary-text: #B2B2B2;
+    -fx-red: #FF9800;
+}
 
 
 .root{
@@ -75,5 +81,49 @@ and open the template in the editor.
 }
 
 .tab-pane{
+    -fx-tab-max-height: 0px;
    
+}
+
+.tab-pane .tab-header-area{
+    visibility: hidden;
+}
+
+.sidebar{
+    -fx-background-color: rgb(58,69,88);
+}
+
+.sidebar-user-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;   
+}
+
+.sidebar-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;   
+}
+
+.sidebar-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;
+    -fx-border-color: rgb(22,169,250);
+    -fx-border-width: 0px 2px 0px 0px;
+}
+
+.sidebar-btn-icon{ 
+    -fx-fill: #b8b1b1;   
+}
+
+.text-field{
+    -fx-text-fill: -fx-primary-text;
+    -fx-font-size: 13pt;
+    -jfx-focus-color: -fx-secondary;
+}
+
+.wrong-credentails{
+    -jfx-unfocus-color: -fx-red;
+    -jfx-focus-color: -fx-red;
 }

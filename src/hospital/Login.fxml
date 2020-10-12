@@ -5,6 +5,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -14,31 +15,36 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
 <StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.LoginController">
    <children>
       <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="940.0" styleClass="loginbg" stylesheets="@../view/Style.css">
          <children>
             <AnchorPane layoutX="480.0" layoutY="51.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="437.0" style="-fx-background-color: #fff; -fx-background-radius: 10px;" stylesheets="@../view/Style.css">
                <children>
-                  <TabPane layoutX="1.0" layoutY="126.0" prefHeight="413.0" prefWidth="435.0" tabClosingPolicy="UNAVAILABLE">
+                  <TabPane fx:id="tabPaneLogin" layoutX="1.0" layoutY="126.0" prefHeight="413.0" prefWidth="435.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                      <Tab text="Admin">
+                      <Tab fx:id="tabAdmin" text="Admin">
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
-                                    <JFXTextField labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Admin ID or Name">
+                                    <JFXTextField fx:id="AUsername" labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Admin ID or Name" styleClass="text-field">
                                        <font>
                                           <Font name="System Bold Italic" size="12.0" />
                                        </font>
                                     </JFXTextField>
-                                    <JFXPasswordField labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Admin Password" />
+                                    <JFXPasswordField fx:id="APassword" labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Admin Password" styleClass="text-field">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXPasswordField>
                                     <JFXButton buttonType="RAISED" layoutX="167.0" layoutY="334.0" onAction="#loginAdmin" prefHeight="47.0" prefWidth="106.0" ripplerFill="#1657bf" styleClass="loginBtn" text="Login" textAlignment="CENTER" />
+                                    <Pane layoutX="68.0" layoutY="-41.0" prefHeight="24.0" prefWidth="275.0" />
+                                    <FontAwesomeIcon iconName="USER" layoutX="56.0" layoutY="180.0" size="2em" />
+                                    <FontAwesomeIcon iconName="KEY" layoutX="56.0" layoutY="243.0" size="2em" />
                                  </children>
                               </AnchorPane>
                            </content>
                         </Tab>
-                      <Tab text="Doctor">
+                      <Tab fx:id="tabDoctor" text="Doctor">
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
@@ -51,14 +57,20 @@
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
-                                    <JFXTextField labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Doctor ID or Name" />
-                                    <JFXPasswordField labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Doctor Password" />
+                                    <JFXTextField fx:id="DUsername" labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Doctor ID or Name" styleClass="text-field">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXTextField>
+                                    <JFXPasswordField fx:id="DPassword" labelFloat="true" layoutX="109.0" layoutY="239.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Doctor Password" styleClass="text-field">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXPasswordField>
                                     <JFXButton buttonType="RAISED" layoutX="167.0" layoutY="334.0" onAction="#loginDoctor" prefHeight="47.0" prefWidth="106.0" ripplerFill="#7f15c6" styleClass="loginBtn" text="Login" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
                            </content>
                         </Tab>
-                        <Tab text="Reception">
+                        <Tab fx:id="tabReception" text="Reception">
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
@@ -71,14 +83,20 @@
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
-                                    <JFXTextField labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Reception ID or Name" />
-                                    <JFXPasswordField labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Reception Password" />
+                                    <JFXTextField fx:id="RUsername" labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Reception ID or Name">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXTextField>
+                                    <JFXPasswordField fx:id="RPassword" labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Reception Password">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXPasswordField>
                                     <JFXButton buttonType="RAISED" layoutX="167.0" layoutY="334.0" onAction="#loginReception" prefHeight="47.0" prefWidth="106.0" ripplerFill="#1657bf" styleClass="loginBtn" text="Login" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
                            </content>
                         </Tab>
-                        <Tab text="Pharmesist">
+                        <Tab fx:id="tabPharmacist" text="Pharmasist">
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
@@ -91,14 +109,20 @@
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
-                                    <JFXTextField labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmesist ID or Name" />
-                                    <JFXPasswordField labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmesist Password" />
+                                    <JFXTextField fx:id="PUsername" labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmesist ID or Name">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXTextField>
+                                    <JFXPasswordField fx:id="PPassword" labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmesist Password">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXPasswordField>
                                     <JFXButton buttonType="RAISED" layoutX="167.0" layoutY="334.0" onAction="#loginPharmecist" prefHeight="47.0" prefWidth="106.0" ripplerFill="#1657bf" styleClass="loginBtn" text="Login" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
                            </content>
                         </Tab>
-                        <Tab text="StockManager">
+                        <Tab fx:id="tabStockManager" text="StockManager">
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
@@ -111,8 +135,14 @@
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
-                                    <JFXTextField labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="StockManager ID or Name" />
-                                    <JFXPasswordField labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="StockManager Password" />
+                                    <JFXTextField fx:id="SUsername" labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="StockManager ID or Name">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXTextField>
+                                    <JFXPasswordField fx:id="SPassword" labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="StockManager Password">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXPasswordField>
                                     <JFXButton buttonType="RAISED" layoutX="167.0" layoutY="334.0" onAction="#loginStockManager" prefHeight="47.0" prefWidth="106.0" ripplerFill="#1657bf" styleClass="loginBtn" text="Login" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
@@ -120,40 +150,45 @@
                         </Tab>
                     </tabs>
                   </TabPane>
-                  <Pane layoutX="10.0" layoutY="70.0" prefHeight="25.0" prefWidth="417.0" styleClass="toobar">
+                  <Group layoutX="41.0" layoutY="71.0">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Admin">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label layoutX="66.0" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Doctor">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label layoutX="132.0" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Doctor">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label layoutX="198.0" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Doctor">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label layoutX="264.0" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Doctor">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label prefHeight="25.0" prefWidth="60.0" styleClass="lbl-status" text="Admin">
+                        <Pane fx:id="slidingPane" prefHeight="25.0" prefWidth="362.0" styleClass="toobar">
+                           <children>
+                              <Label fx:id="lblAdmin" onMouseClicked="#openAdminTab" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Admin">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblReception" layoutX="69.0" onMouseClicked="#openReceptionTab" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Reception">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblDoctor" layoutX="138.0" onMouseClicked="#openDoctorTab" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Doctor">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblPharmacist" layoutX="207.0" onMouseClicked="#openPharmecistTab" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Pharmacist">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblStockManager" layoutX="276.0" onMouseClicked="#openStockManagerTab" prefHeight="25.0" prefWidth="80.0" styleClass="lbl-user" text="StockManager">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="lblStatus" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-status" text="Admin">
                            <cursor>
                               <Cursor fx:constant="DEFAULT" />
                            </cursor>
                         </Label>
                      </children>
-                  </Pane>
+                  </Group>
+                  <FontAwesomeIcon iconName="LOCK" layoutX="203.0" layoutY="55.0" size="4em" />
                </children>
                <effect>
                   <DropShadow height="20.0" radius="9.5" width="20.0" />
