@@ -2,76 +2,42 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="250.0" styleClass="sidebar" stylesheets="@../view/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.SidebarController">
+<VBox prefHeight="580.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="68.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../Downloads/201101d24f65f6cbd8e2870314e005ac.jpg" />
-         </image>
-      </ImageView>
-      <JFXButton contentDisplay="RIGHT" layoutX="87.0" layoutY="162.0" ripplerFill="#8a8a8a" styleClass="sidebar-user-btn" text="Admin" textFill="WHITE">
+      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Add Employee" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIcon iconName="USER_PLUS" size="3em" />
+         </graphic>
          <font>
             <Font name="Calibri" size="12.0" />
          </font>
-         <graphic>
-            <FontAwesomeIcon glyphStyle="-fx-fill:#b8b1b1" iconName="SORT_DESC" size="1.2em" />
-         </graphic>
       </JFXButton>
-      <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="231.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-         <children>
-            <FontAwesomeIcon iconName="HOME" size="2em" styleClass="sidebar-btn-icon" />
-            <Label text="Home" textFill="#b8b1b1">
-               <font>
-                  <Font name="Calibri" size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="266.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-         <children>
-            <FontAwesomeIcon iconName="HOME" size="2em" styleClass="sidebar-btn-icon" />
-            <Label text="Home" textFill="#b8b1b1">
-               <font>
-                  <Font name="Calibri" size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="301.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" styleClass="sidebar-btn">
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-         <children>
-            <FontAwesomeIcon iconName="HOME" size="2em" styleClass="sidebar-btn-icon" />
-            <Label text="Home" textFill="#b8b1b1">
-               <font>
-                  <Font name="Calibri" size="14.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-            </Label>
-         </children>
-      </HBox>
+      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Manage Staff" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIcon iconName="USERS" size="3em" />
+         </graphic>
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Send Notification" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIcon iconName="BELL" size="3em" />
+         </graphic>
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Log Out" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIcon iconName="SIGN_OUT" size="3em" />
+         </graphic>
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
-</AnchorPane>
+</VBox>

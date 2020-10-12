@@ -310,6 +310,7 @@ public class LoginController implements Initializable {
             
     }
 
+    @FXML
     private void loginPharmacist(ActionEvent event) {
         MYCONNECTION myconnection =new MYCONNECTION();
             
@@ -426,7 +427,8 @@ public class LoginController implements Initializable {
         
         
     }
-
+    
+    @FXML
     private void openPharmacistTab(MouseEvent event) {
         
        TranslateTransition toRightAnimation = new TranslateTransition(new Duration(500), lblStatus);
@@ -457,13 +459,8 @@ public class LoginController implements Initializable {
        tabPaneLogin.getSelectionModel().select(tabStockManager);
     }
 
-    @FXML
-    private void loginPharmecist(ActionEvent event) {
-    }
 
-    @FXML
-    private void openPharmecistTab(MouseEvent event) {
-    }
+
 
     
 }

@@ -120,7 +120,7 @@ and open the template in the editor.
 .text-field{
     -fx-text-fill: -fx-primary-text;
     -fx-font-size: 13pt;
-    -jfx-focus-color: -fx-secondary;
+    //-jfx-focus-color: -fx-secondary;
 }
 
 .wrong-credentails{

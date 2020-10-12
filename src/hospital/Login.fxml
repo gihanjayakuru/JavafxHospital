@@ -109,15 +109,15 @@
                            <content>
                               <AnchorPane prefHeight="476.0" prefWidth="441.0">
                                  <children>
-                                    <JFXTextField fx:id="PUsername" labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmesist ID or Name">
+                                    <JFXTextField fx:id="PUsername" labelFloat="true" layoutX="109.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmacist ID or Name">
                                        <font>
                                           <Font name="System Bold Italic" size="12.0" />
                                        </font></JFXTextField>
-                                    <JFXPasswordField fx:id="PPassword" labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmesist Password">
+                                    <JFXPasswordField fx:id="PPassword" labelFloat="true" layoutX="107.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Pharmacist Password">
                                        <font>
                                           <Font name="System Bold Italic" size="12.0" />
                                        </font></JFXPasswordField>
-                                    <JFXButton buttonType="RAISED" layoutX="167.0" layoutY="334.0" onAction="#loginPharmecist" prefHeight="47.0" prefWidth="106.0" ripplerFill="#1657bf" styleClass="loginBtn" text="Login" textAlignment="CENTER" />
+                                    <JFXButton buttonType="RAISED" layoutX="167.0" layoutY="334.0" onAction="#loginPharmacist" prefHeight="47.0" prefWidth="106.0" ripplerFill="#1657bf" styleClass="loginBtn" text="Login" textAlignment="CENTER" />
                                  </children>
                               </AnchorPane>
                            </content>
@@ -169,7 +169,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Label>
-                              <Label fx:id="lblPharmacist" layoutX="207.0" onMouseClicked="#openPharmecistTab" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Pharmacist">
+                              <Label fx:id="lblPharmacist" layoutX="207.0" onMouseClicked="#openPharmacistTab" prefHeight="25.0" prefWidth="60.0" styleClass="lbl-user" text="Pharmacist">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
