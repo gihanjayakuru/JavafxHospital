@@ -36,6 +36,8 @@ public class SidebarController implements Initializable {
 
     @FXML
     private void AddEmployee(ActionEvent event) {
+            
+        
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/hospital/Admin/AddEmployee.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);

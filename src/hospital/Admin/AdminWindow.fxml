@@ -5,7 +5,6 @@
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
@@ -104,7 +103,7 @@
                                     </AnchorPane>
                                 </content>
                               </Tab>
-                              <Tab text="Employee">
+                              <Tab text="Employee List">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -112,22 +111,20 @@
                                              <children>
                                                 <VBox prefHeight="558.0" prefWidth="900.0">
                                                    <children>
-                                                      <HBox>
+                                                      <AnchorPane prefHeight="106.0" prefWidth="852.0">
                                                          <children>
-                                                            <JFXTextField>
-                                                               <padding>
-                                                                  <Insets bottom="10.0" />
-                                                               </padding>
-                                                               <HBox.margin>
-                                                                  <Insets bottom="30.0" />
-                                                               </HBox.margin>
-                                                            </JFXTextField>
+                                                            <JFXTextField layoutX="66.0" layoutY="28.0" prefHeight="25.0" prefWidth="197.0" promptText="search employee" />
+                                                            <FontAwesomeIcon iconName="SEARCH" layoutX="35.0" layoutY="49.0" size="2em" />
+                                                            <Separator layoutY="74.0" prefHeight="8.0" prefWidth="900.0" />
                                                          </children>
-                                                      </HBox>
-                                                      <TableView prefHeight="200.0" prefWidth="200.0">
+                                                      </AnchorPane>
+                                                      <TableView fx:id="tablePerson" prefHeight="453.0" prefWidth="900.0">
                                                         <columns>
-                                                          <TableColumn prefWidth="75.0" text="C1" />
-                                                          <TableColumn prefWidth="75.0" text="C2" />
+                                                          <TableColumn fx:id="colID" prefWidth="162.0" text="Employee ID" />
+                                                          <TableColumn fx:id="colName" minWidth="3.0" prefWidth="196.0" text="Name" />
+                                                            <TableColumn fx:id="colPosition" minWidth="3.0" prefWidth="196.0" text="Position" />
+                                                            <TableColumn fx:id="colGender" minWidth="3.0" prefWidth="196.0" text="Gender" />
+                                                            <TableColumn fx:id="colEdit" minWidth="3.0" prefWidth="149.0" text="Edit" />
                                                         </columns>
                                                       </TableView>
                                                    </children>

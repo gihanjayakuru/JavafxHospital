@@ -9,7 +9,7 @@
    <children>
       <JFXButton contentDisplay="TOP" onAction="#AddEmployee" prefHeight="400.0" prefWidth="150.0" text="Add Employee" textAlignment="CENTER">
          <graphic>
-            <FontAwesomeIcon iconName="USER_PLUS" size="3em" />
+            <FontAwesomeIcon fill="#06b0c5" iconName="USER_PLUS" size="3em" />
          </graphic>
          <font>
             <Font name="Calibri" size="12.0" />
@@ -17,7 +17,7 @@
       </JFXButton>
       <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Manage Staff" textAlignment="CENTER">
          <graphic>
-            <FontAwesomeIcon iconName="USERS" size="3em" />
+            <FontAwesomeIcon fill="#06b0c5" iconName="USERS" size="3em" />
          </graphic>
          <font>
             <Font name="Calibri" size="12.0" />
@@ -25,7 +25,7 @@
       </JFXButton>
       <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Send Notification" textAlignment="CENTER">
          <graphic>
-            <FontAwesomeIcon iconName="BELL" size="3em" />
+            <FontAwesomeIcon fill="#06b0c5" iconName="BELL" size="3em" />
          </graphic>
          <font>
             <Font name="Calibri" size="12.0" />
@@ -33,7 +33,7 @@
       </JFXButton>
       <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Log Out" textAlignment="CENTER">
          <graphic>
-            <FontAwesomeIcon iconName="SIGN_OUT" size="3em" />
+            <FontAwesomeIcon fill="#06b0c5" iconName="SIGN_OUT" size="3em" />
          </graphic>
          <font>
             <Font name="Calibri" size="12.0" />

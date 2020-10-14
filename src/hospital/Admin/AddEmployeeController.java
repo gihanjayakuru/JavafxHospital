@@ -5,6 +5,7 @@
  */
 package hospital.Admin;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
 import hospital.Connection.MYCONNECTION;
@@ -19,11 +20,15 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -50,6 +55,8 @@ public class AddEmployeeController implements Initializable {
      * Initializes the controller class.
      */
     static String gender;
+    @FXML
+    private JFXButton closeButton;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -135,6 +142,9 @@ public class AddEmployeeController implements Initializable {
 
     @FXML
     private void CancelEmployeeBtn(ActionEvent event) {
+       Stage stage = (Stage) closeButton.getScene().getWindow();
+  // do what you have to do
+        stage.close();
     }
     
 }
