@@ -130,7 +130,7 @@ public class LoginController implements Initializable {
     
     private void LoadAdminWindow(){
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/hospital/DashBoard.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/hospital/Admin/AdminWindow.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("Admin");
             stage.setScene(new Scene(parent));
@@ -145,7 +145,7 @@ public class LoginController implements Initializable {
     }
     private void LoadDoctorWindow(){
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/hospital/DashBoard.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/hospital/Admin/AdminWindow.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("Doctor");
             stage.setScene(new Scene(parent));

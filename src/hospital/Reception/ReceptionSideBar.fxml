@@ -7,7 +7,7 @@
 
 <VBox prefHeight="580.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospital.SidebarController">
    <children>
-      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Add Employee" textAlignment="CENTER">
+      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Add Patient" textAlignment="CENTER">
          <graphic>
             <FontAwesomeIcon iconName="USER_PLUS" size="3em" />
          </graphic>
@@ -15,7 +15,7 @@
             <Font name="Calibri" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Manage Staff" textAlignment="CENTER">
+      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Dotor Status" textAlignment="CENTER">
          <graphic>
             <FontAwesomeIcon iconName="USERS" size="3em" />
          </graphic>
@@ -23,7 +23,7 @@
             <Font name="Calibri" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Send Notification" textAlignment="CENTER">
+      <JFXButton contentDisplay="TOP" prefHeight="400.0" prefWidth="150.0" text="Notifications" textAlignment="CENTER">
          <graphic>
             <FontAwesomeIcon iconName="BELL" size="3em" />
          </graphic>
