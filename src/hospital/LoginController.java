@@ -160,7 +160,7 @@ public class LoginController implements Initializable {
     }
     private void LoadReceptionWindow(){
         try {
-            Parent parent = FXMLLoader.load(getClass().getResource("/hospital/DashBoard.fxml"));
+            Parent parent = FXMLLoader.load(getClass().getResource("/hospital/ReceptionWindow.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("Reception");
             stage.setScene(new Scene(parent));

@@ -5,9 +5,19 @@
  */
 package hospital;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -23,5 +33,21 @@ public class SidebarController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void AddEmployee(ActionEvent event) {
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource("/hospital/Admin/AddEmployee.fxml"));
+            Stage stage = new Stage(StageStyle.DECORATED);
+            stage.setTitle("AddEmployee");
+            stage.setScene(new Scene(parent));
+            stage.show();
+            
+            
+            
+        } catch (IOException ex) {
+            Logger.getLogger(SidebarController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }
